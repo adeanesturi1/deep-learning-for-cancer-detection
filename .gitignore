@@ -7,3 +7,14 @@ nnUNet_predictions/**/*.nii
 nnUNet_predictions/**/*.npz
 nnUNet_preprocessed/**/*.nii.gz
 nnUNet_preprocessed/**/*.npz
+*.nii.gz
+*.npz
+*.nii.gz
+*.npz
+*.nii.gz
+*.nii.gz
+*.nii
+*.npz
+*.pt
+*.pth
+*.ckpt
