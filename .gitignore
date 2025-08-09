@@ -5,3 +5,5 @@ brats_attacks_multi_run_v2/**/*.npz
 nnUNet_predictions/**/*.nii.gz
 nnUNet_predictions/**/*.nii
 nnUNet_predictions/**/*.npz
+nnUNet_preprocessed/**/*.nii.gz
+nnUNet_preprocessed/**/*.npz
