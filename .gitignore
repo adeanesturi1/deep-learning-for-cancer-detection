@@ -1,0 +1,4 @@
+brats_attacks_multi_run_v2/**/*.nii.gz
+brats_attacks_multi_run_v2/**/*.nii.gz
+brats_attacks_multi_run_v2/**/*.nii
+brats_attacks_multi_run_v2/**/*.npz
