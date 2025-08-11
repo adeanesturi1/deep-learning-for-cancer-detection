@@ -13,16 +13,6 @@ import pandas as pd # Import pandas for CSV output
 print("Starting FGSM attack script...", flush=True)
 print("---", flush=True)
 
-# ===========================================================================
-# IMPORTANT: nnUNet Environment Variables
-# These variables MUST be set in your shell environment *before* running this script,
-# or in your SLURM batch script *before* the 'python' command.
-# Example:
-# export nnUNet_raw="/sharedscratch/an252/cancerdetectiondataset/nnUNet_raw"
-# export nnUNet_preprocessed="/sharedscratch/an252/cancerdetectiondataset/nnUNet_preprocessed"
-# export nnUNet_results="/sharedscratch/an252/cancerdetectiondataset/nnUNet_results"
-# export nnUNet_compile=False # Disable torch.compile for checkpoint loading compatibility
-# ===========================================================================
 
 # --- Global Settings & Paths ---
 image_dir = "/sharedscratch/an252/cancerdetectiondataset/nnUNet_raw/Dataset001_BraTS/imagesTr"

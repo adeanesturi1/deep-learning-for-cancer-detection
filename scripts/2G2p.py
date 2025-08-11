@@ -1,3 +1,4 @@
+# fgsm attack brat
 import os
 import torch
 import nibabel as nib
@@ -14,17 +15,6 @@ import seaborn as sns # Import seaborn for nicer plots
 print("Starting FGSM attack script...", flush=True)
 print("---", flush=True)
 
-# ===========================================================================
-# IMPORTANT: nnUNet Environment Variables
-# These variables MUST be set in your shell environment *before* running this script,
-# or in your SLURM batch script *before* the 'python' command.
-# Example:
-# export nnUNet_raw="/sharedscratch/an252/cancerdetectiondataset/nnUNet_raw"
-# export nnUNet_preprocessed="/sharedscratch/an252/cancerdetectiondataset/nnUNet_preprocessed"
-# export nnUNet_results="/sharedscratch/an252/cancerdetectiondataset/nnUNet_results"
-# export nnUNet_compile=False # Disable torch.compile for checkpoint loading compatibility
-# ===========================================================================
-
 # --- Global Settings & Paths ---
 image_dir = "/sharedscratch/an252/cancerdetectiondataset/nnUNet_raw/Dataset001_BraTS/imagesTr"
 gt_base_dir = "/sharedscratch/an252/cancerdetectiondataset/nnUNet_preprocessed/Dataset001_BraTS/gt_segmentations" # Base dir for GT
@@ -34,7 +24,7 @@ output_base_dir = "/sharedscratch/an252/cancerdetectiondataset/brats_attacks_mul
 plans_path = "/sharedscratch/an252/cancerdetectiondataset/nnUNet_preprocessed/Dataset001_BraTS/nnUNetPlans.json"
 dataset_json_path = "/sharedscratch/an252/cancerdetectiondataset/nnUNet_raw/Dataset001_BraTS/dataset.json"
 
-device = torch.device('cuda') # Set to 'cuda' for GPU usage. Change to 'cpu' if no GPU available.
+device = torch.device('cuda')
 print(f"Using device: {device}", flush=True)
 
 # --- Load JSON contents (once for all attacks) ---
